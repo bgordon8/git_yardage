@@ -9,13 +9,17 @@ class ApplicationController < ActionController::API
         else
             token = auth_header.split(" ")[1]
             secret = "hello now there guy"
-            decoded_token = JWT.decode token, secret
-            payload = decoded_token.first
-            user_id = payload["user_id"]
-            @user = User.find(user_id)
+            
+            begin
+                decoded_token = JWT.decode token, secret
+                payload = decoded_token.first
+                user_id = payload["user_id"]
+                @user = User.find(user_id)
+                render json: {message: "success"}, status: :ok
+            rescue 
+                render json: {message: "Invalid JWT"}, status: :forbidden
+            end
 
-
-            render json: {message: "success"}, status: :ok
         end
     end
 end
