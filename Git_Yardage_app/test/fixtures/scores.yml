@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  strokes: 1
+  chips: 1
+  putts: 1
+  user: one
+  hole: one
+
+two:
+  strokes: 1
+  chips: 1
+  putts: 1
+  user: two
+  hole: two
