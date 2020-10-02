@@ -3,7 +3,7 @@ class CreateCoords < ActiveRecord::Migration[6.0]
     create_table :coords do |t|
       t.float :lat
       t.float :long
-      t.string :type
+      t.string :coord_location
       t.references :hole, null: false, foreign_key: true
 
       t.timestamps

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_031932) do
+ActiveRecord::Schema.define(version: 2020_10_02_034751) do
 
   create_table "coords", force: :cascade do |t|
     t.float "lat"
     t.float "long"
-    t.string "type"
+    t.string "coord_location"
     t.integer "hole_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

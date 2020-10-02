@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
                 payload = decoded_token.first
                 user_id = payload["user_id"]
                 @user = User.find(user_id)
-                render json: { message: "success" }, status: :ok
+                # render json: { message: "success" }, status: :ok
             rescue 
                 render json: { message: "Invalid JWT" }, status: :forbidden
             end

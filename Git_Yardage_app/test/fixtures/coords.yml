@@ -3,11 +3,11 @@
 one:
   lat: 1.5
   long: 1.5
-  type: 
+  coord_location: MyString
   hole: one
 
 two:
   lat: 1.5
   long: 1.5
-  type: 
+  coord_location: MyString
   hole: two
