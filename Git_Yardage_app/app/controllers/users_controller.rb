@@ -7,6 +7,8 @@ class UsersController < ApplicationController
         render json: @users, include: [:scores]
     end
 
+    
+
     def create
         @user = User.create(
             username: params[:username],

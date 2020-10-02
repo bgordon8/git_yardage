@@ -20,9 +20,13 @@ class AuthenticationController < ApplicationController
 
     end
 
+    def profile
+        render json: @user, include: [:scores]
+    end
     
     def register
         @user = User.find_by email: params[:email]
+
 
         if @user
             render json: { message: "email taken" }, status: :ok
