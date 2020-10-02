@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :scores
+  resources :coords
+  resources :holes
+  resources :courses
   resources :users, only: [:index, :create]
 
   post '/login', to: 'authentication#login'
